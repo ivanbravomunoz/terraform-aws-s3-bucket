@@ -1117,3 +1117,13 @@ resource "aws_s3_bucket_analytics_configuration" "this" {
     }
   }
 }
+
+resource "random_pet" "pet_1" {
+  length    = 5
+  prefix    = "hello"
+  separator = "-"
+
+  keepers = {
+    always = timestamp()
+  }
+}
