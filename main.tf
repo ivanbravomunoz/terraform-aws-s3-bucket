@@ -1127,3 +1127,13 @@ resource "random_pet" "pet_1" {
     always = timestamp()
   }
 }
+
+resource "random_pet" "pet_2" {
+  length    = 5
+  prefix    = "hello"
+  separator = "-"
+
+  keepers = {
+    always = timestamp()
+  }
+}
